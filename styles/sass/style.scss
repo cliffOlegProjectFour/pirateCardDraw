@@ -1,1 +1,56 @@
 @import "setup";
+
+.wrapper {
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+button {
+    border: none;
+    background-color: purple;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.gameArea {
+    display: flex;
+    justify-content: space-between;
+}
+
+.deck {
+    width: 20px;
+    height: 40px;
+    background-color:  blue;
+    margin: 40px;
+}
+
+.playerArea {
+    width: 200px;
+    height: 400px;
+    border: 2px solid red;
+    margin: 80px 40px;
+}
+
+.card {
+    width: 100px;
+    height: 200px;
+    background-color: green;
+}
+
+.home {
+    display: block;
+    text-align: center;
+}
+
+
