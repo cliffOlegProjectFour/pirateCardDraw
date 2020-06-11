@@ -63,7 +63,6 @@ cardApp.init = function(){
             // Check for winning score
             const checkForWin = () => {
                 setTimeout(function() {
-
                     if (cardApp.playerScore === cardApp.maxScore) {
                         window.location.href = './winPage.html';
                     } else if (cardApp.computerScore === cardApp.maxScore) {
@@ -89,8 +88,8 @@ cardApp.init = function(){
             }
 
             // user clicks "draw" -> displays player's card -> reveal computer's card
-            $('.playerCard').empty();
-            $('.computerCard').empty();
+            $('.playerCard').empty().html(`<img src="./assets/pirateCard.jpg">`);
+            $('.computerCard').empty().html(`<img src="./assets/pirateCard.jpg">`);
             let playerCardImage = $('<img>').attr('src', result.cards[0].image);
             let computerCardImage = $('<img>').attr('src', result.cards[1].image);
             $('.playerCard').html(playerCardImage);

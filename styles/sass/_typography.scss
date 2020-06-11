@@ -1,0 +1,29 @@
+//font-family: 'Nanum Brush Script', cursive;
+//font-family: 'Piedra', cursive;
+
+h1 {
+    font-family: 'Piedra', cursive;
+    font-size: 100px;
+}
+
+button,
+p {
+    font-family: 'Nanum Brush Script', cursive;
+    font-size: 40px;
+}
+
+p {
+    background-color: rgba(0,0,0, .7);
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 5% auto 5% auto;
+}
+
+.playerArea p {
+    text-align: center;
+}
+
+.homeContent p {
+    width: 40%;
+}

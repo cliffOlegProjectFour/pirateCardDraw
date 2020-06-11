@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pirate Card Draw</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Piedra&display=swap" rel="stylesheet"> 
 </head>
 
-<body>
+<body class="gameBody">
     <div class="gameArea wrapper">
         <div class="playerArea">
             <div class="playerScore">
@@ -15,29 +16,24 @@
             </div>
             
             <div class="card playerCard">
-    
+                <img src="./assets/pirateCard.jpg" alt="back of a pirate card">
             </div>
+        </div>
 
+        <div class="gameButtons wrapper">
             <button class="btn draw">Draw</button>
+            <button class="btn home">Home</button>
         </div>
-
-        <div class="deck">
-            <!-- deck of cards -->
-        </div>
-
+        
         <div class="playerArea">
             <div class="computerScore">
 
             </div>
             
             <div class="card computerCard">
-
+                <img src="./assets/pirateCard.jpg" alt="back of a pirate card">
             </div>
         </div>
-    </div>
-
-    <div class="wrapper">
-        <button class="btn home">Home</button>
     </div>
     
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
