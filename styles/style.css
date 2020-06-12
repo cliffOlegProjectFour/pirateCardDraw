@@ -237,29 +237,29 @@ html {
 
 h1 {
   font-family: 'Piedra', cursive;
+}
+
+.homeBody h1 {
   font-size: 100px;
+  color: #8da902;
+}
+
+.winBody h1,
+.loseBody h1 {
+  font-size: 60px;
+  color: #000000;
 }
 
 button,
 p {
   font-family: 'Nanum Brush Script', cursive;
   font-size: 40px;
+  letter-spacing: 1px;
 }
 
 p {
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
-  border-radius: 20px;
-  padding: 10px;
-  margin: 5% auto 5% auto;
-}
-
-.playerArea p {
-  text-align: center;
-}
-
-.homeContent p {
-  width: 40%;
 }
 
 .wrapper {
@@ -286,36 +286,59 @@ button {
   border-radius: 10px;
 }
 
+p {
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 5% auto;
+}
+
 .homeBody,
 .gameBody,
 .winBody,
 .loseBody {
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  background-position: center;
 }
 
 .homeBody {
   background-image: url(".././assets/homeBackground.jpg");
 }
 
-.gameBody {
+.gameBody,
+.winBody,
+.loseBody {
   background-image: url(".././assets/gameBackground.jpg");
 }
 
-.homeContent {
+.winBody img,
+.loseBody img {
+  width: 30%;
+  margin: 20px auto 10px auto;
+}
+
+.homeContent,
+.endContent {
   padding: 40px;
   text-align: center;
 }
 
-.homeContent h1 {
-  margin: 0;
-  color: #8da902;
+.homeContent h1,
+.endContent h1 {
+  margin: 0 auto;
 }
 
-.homeContent button {
+.homeContent p,
+.endContent p {
   margin: 20px auto;
+  width: 40%;
+}
+
+.homeContent button,
+.endContent button {
+  margin: 20px auto 0 auto;
 }
 
 .gameArea {

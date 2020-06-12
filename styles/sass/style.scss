@@ -25,33 +25,60 @@ button {
     border-radius: 10px;
 }
 
+p {
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 5% auto;
+}
+
 .homeBody,
 .gameBody,
 .winBody,
 .loseBody {
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    background-position: center;
 }
 
 .homeBody {
     background-image: url('.././assets/homeBackground.jpg');
 }
 
-.gameBody {
+.gameBody,
+.winBody,
+.loseBody {
     background-image: url('.././assets/gameBackground.jpg');
 }
 
-.homeContent {
+// .winBody {
+//     background-image: url('.././assets/winBackground.jpeg');
+// }
+
+// .loseBody {
+//     background-image: url('.././assets/loseBackground.jpeg');
+// }
+
+.winBody img,
+.loseBody img{
+    width: 30%;
+    margin: 20px auto 10px auto;
+}
+
+.homeContent,
+.endContent {
     padding: 40px;
     text-align: center;
         h1 {
-            margin: 0;
-            color: rgb(141, 169, 2);
+            margin: 0 auto;
+        }
+        p {
+            margin: 20px auto;
+            width: 40%;
         }
         button {
-            margin: 20px auto;
+            margin: 20px auto 0 auto;
         }
 }
 
@@ -67,7 +94,6 @@ button {
 
 .card {
     min-width: 200px;
-    // width: 80%;
     padding: 10px;
     height: 50vh;
         img {
