@@ -58,12 +58,25 @@ cardApp.init = function(){
                 }
             }
 
+            console.log(result.cards);
+
+            // function to set both scores to 0 at the end of the game
+            // solves the problem if user clicks back from the end page 
+            const setInitialScore = () => {
+                cardApp.playerScore = 0;
+                cardApp.computerScore = 0;
+                $('.playerScore').html(`<p>Player Score: ${cardApp.playerScore}</p>`);
+                $('.computerScore').html(`<p>Computer Score: ${cardApp.computerScore}</p>`);
+            }
+
             // Check for winning score
             const checkForWin = () => {
                 setTimeout(function() {
                     if (cardApp.playerScore === cardApp.maxScore) {
+                        setInitialScore();
                         window.location.href = './winPage.html';
                     } else if (cardApp.computerScore === cardApp.maxScore) {
+                        setInitialScore();
                         window.location.href = './losePage.html'
                     }
                 }, 1000)
@@ -86,14 +99,18 @@ cardApp.init = function(){
             }
 
             // user clicks "draw" -> displays player's card -> reveal computer's card
-            $('.playerCard').empty().html(`<img src="./assets/pirateCard.jpg">`);
-            $('.computerCard').empty().html(`<img src="./assets/pirateCard.jpg">`);
             let playerCardImage = $('<img>').attr('src', result.cards[0].image);
             let computerCardImage = $('<img>').attr('src', result.cards[1].image);
-            $('.playerCard').html(playerCardImage);
+
+            $('.playerCard').empty().html(`<img src="./assets/pirateCard.jpg">`);
+            setTimeout(function(){
+                $('.playerCard').html(playerCardImage);
+            }, 800)
+
+            $('.computerCard').empty().html(`<img src="./assets/pirateCard.jpg">`);
             setTimeout(function(){
                 $('.computerCard').html(computerCardImage);
-            }, 1500)
+            }, 1600)
         })
     })
     
@@ -106,9 +123,7 @@ cardApp.init = function(){
     $('.start').on('click', function() {
         window.location.href = './gamePage.html';
     })
-
-    // Add the 'restart' button to navigate back to the home page
-
+    
 };
 
 $(function(){
