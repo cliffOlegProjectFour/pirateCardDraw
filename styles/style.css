@@ -241,13 +241,14 @@ h1 {
 
 .homeBody h1 {
   font-size: 100px;
+  letter-spacing: 2px;
   color: #8da902;
 }
 
 .winBody h1,
 .loseBody h1 {
   font-size: 60px;
-  color: #000000;
+  color: whitesmoke;
 }
 
 button,
@@ -286,6 +287,17 @@ button {
   border-radius: 10px;
 }
 
+button:hover, button:focus, button:focus-within {
+  width: 230px;
+  height: 70px;
+}
+
+button:active {
+  width: 200px;
+  height: auto;
+  background-color: #650165;
+}
+
 p {
   text-align: center;
   border-radius: 20px;
@@ -307,15 +319,22 @@ p {
   background-image: url(".././assets/homeBackground.jpg");
 }
 
-.gameBody,
-.winBody,
-.loseBody {
+.gameBody {
   background-image: url(".././assets/gameBackground.jpg");
+}
+
+.winBody {
+  background-color: #65CFDC;
+}
+
+.loseBody {
+  background-color: #25011D;
 }
 
 .winBody img,
 .loseBody img {
   width: 30%;
+  min-width: 200px;
   margin: 20px auto 10px auto;
 }
 
@@ -333,7 +352,7 @@ p {
 .homeContent p,
 .endContent p {
   margin: 20px auto;
-  width: 40%;
+  width: 50%;
 }
 
 .homeContent button,
@@ -355,10 +374,13 @@ p {
   margin: 8% auto;
 }
 
+.playerArea p {
+  height: 112px;
+}
+
 .card {
   min-width: 200px;
   padding: 10px;
-  height: 50vh;
 }
 
 .card img {
@@ -389,4 +411,81 @@ p {
 
 .gameButtons button {
   margin-bottom: 20px;
+}
+
+.mobileBtn {
+  display: none;
+}
+
+@media (max-width: 950px) {
+  .homeContent h1 {
+    font-size: 75px;
+  }
+  .homeContent p {
+    width: 70%;
+  }
+  .desktopBtn {
+    display: none;
+  }
+  .mobileBtn {
+    display: block;
+    margin: 0 auto;
+  }
+  .gameButtons {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .gameButtons button {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .gameButtons .home {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 590px) {
+  .wrapper {
+    width: 95%;
+  }
+  .homeBody {
+    background-size: auto;
+  }
+  .homeContent h1 {
+    font-size: 60px;
+  }
+  .homeContent p {
+    height: 300px;
+    overflow-y: scroll;
+    width: 85%;
+  }
+  .gameBody {
+    background-repeat: repeat;
+  }
+  .gameArea {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .playerArea {
+    width: 70%;
+  }
+  .playerArea p {
+    height: auto;
+    font-size: 30px;
+  }
+  .card {
+    min-width: auto;
+  }
+  .gameButtons {
+    width: 100%;
+  }
+  .winBody h1,
+  .loseBody h1 {
+    font-size: 40px;
+  }
 }

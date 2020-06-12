@@ -58,8 +58,6 @@ cardApp.init = function(){
                 }
             }
 
-            console.log(result.cards);
-
             // Check for winning score
             const checkForWin = () => {
                 setTimeout(function() {
@@ -88,8 +86,8 @@ cardApp.init = function(){
             }
 
             // user clicks "draw" -> displays player's card -> reveal computer's card
-            $('.playerCard').empty().html(`<img src="./assets/pirateCard1.jpeg">`);
-            $('.computerCard').empty().html(`<img src="./assets/pirateCard1.jpeg">`);
+            $('.playerCard').empty().html(`<img src="./assets/pirateCard.jpg">`);
+            $('.computerCard').empty().html(`<img src="./assets/pirateCard.jpg">`);
             let playerCardImage = $('<img>').attr('src', result.cards[0].image);
             let computerCardImage = $('<img>').attr('src', result.cards[1].image);
             $('.playerCard').html(playerCardImage);
