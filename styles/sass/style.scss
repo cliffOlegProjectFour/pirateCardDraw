@@ -59,16 +59,14 @@ p {
 
 .gameBody {
     background-image: url('.././assets/gameBackground.jpg');
+    background-repeat: repeat;
 }
 
 .winBody {
-    // background-image: url('.././assets/winBackground.jpg');
-    // background-color: #96E5E0;
     background-color: #65CFDC;
 }
 
 .loseBody {
-    // background-image: url('.././assets/loseBackground.jpg');
     background-color: #25011D;
 }
 
@@ -137,6 +135,9 @@ p {
 }
 
 @media (max-width: 950px) {
+    .homeBody {
+        background-image: url(.././assets/homeMobileBackground.jpg);
+    }
 
     .homeContent {
         h1 {
@@ -174,10 +175,6 @@ p {
     .wrapper {
         width: 95%;
     }
-    
-    .homeBody {
-        background-size: auto;
-    }
 
     .homeContent {
         h1 {
@@ -188,10 +185,6 @@ p {
             overflow-y: scroll;
             width: 85%;
         }
-    }
-
-    .gameBody {
-        background-repeat: repeat;
     }
 
     .gameArea {
