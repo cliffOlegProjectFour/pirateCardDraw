@@ -101,15 +101,19 @@ cardApp.init = function(){
             // user clicks "draw" -> displays player's card -> reveal computer's card
             let playerCardImage = $('<img>').attr('src', result.cards[0].image);
             let computerCardImage = $('<img>').attr('src', result.cards[1].image);
-
-            $('.playerCard').empty().html(`<img src="./assets/pirateCard.jpg">`);
+            
+            $('.playerFlip').removeClass('cardInner');
+            $('.playerCard .cardBack').empty().html(`<img src="./assets/pirateCard.jpg">`);
             setTimeout(function(){
-                $('.playerCard').html(playerCardImage);
+                $('.playerCard .cardBack').html(playerCardImage);
+                $('.playerFlip').addClass('cardInner');
             }, 800)
-
-            $('.computerCard').empty().html(`<img src="./assets/pirateCard.jpg">`);
+            
+            $('.computerFlip').removeClass('cardInner');
+            $('.computerCard .cardBack').empty().html(`<img src="./assets/pirateCard.jpg">`);
             setTimeout(function(){
-                $('.computerCard').html(computerCardImage);
+                $('.computerCard .cardBack').html(computerCardImage);
+                $('.computerFlip').addClass('cardInner');
             }, 1600)
         })
     })

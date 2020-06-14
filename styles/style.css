@@ -368,6 +368,7 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 80vh;
 }
 
 .playerArea {
@@ -385,7 +386,7 @@ p {
 }
 
 .card img {
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .home {
@@ -416,6 +417,50 @@ p {
 
 .mobileBtn {
   display: none;
+}
+
+.card {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.cardFront, .cardBack {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  /* to work in Safari */
+  backface-visibility: hidden;
+}
+
+.cardFront {
+  width: 95%;
+  height: 95%;
+}
+
+.cardBack {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  width: 100%;
+  height: 100%;
+}
+
+.playerCard,
+.computerCard {
+  min-height: 50vh;
 }
 
 @media (max-width: 950px) {
@@ -460,6 +505,10 @@ p {
     overflow-y: scroll;
     width: 85%;
   }
+  .winBody h1,
+  .loseBody h1 {
+    font-size: 40px;
+  }
   .gameArea {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -479,11 +528,18 @@ p {
   .card {
     min-width: auto;
   }
+  .cardFront,
+  .cardBack {
+    max-width: 300px;
+  }
   .gameButtons {
     width: 100%;
   }
-  .winBody h1,
-  .loseBody h1 {
-    font-size: 40px;
+  .desktopBtn {
+    display: block;
+    margin: 0 auto;
+  }
+  .mobileBtn {
+    display: none;
   }
 }
