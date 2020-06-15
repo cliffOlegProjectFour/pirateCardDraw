@@ -466,6 +466,10 @@ p {
   .wrapper {
     width: 95%;
   }
+  button:hover, button:focus, button:focus-within {
+    width: 200px;
+    height: auto;
+  }
   .playerArea {
     margin: 2%;
   }

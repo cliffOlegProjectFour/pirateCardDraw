@@ -3,6 +3,14 @@
         width: 95%;
     }
 
+    button {
+        &:hover,
+        &:focus,
+        &:focus-within {
+            width: 200px;
+            height: auto;
+        }
+    }
     .playerArea {
         margin: 2%;
     }
