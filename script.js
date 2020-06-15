@@ -6,7 +6,7 @@ cardApp.playerScore = 0;
 cardApp.computerScore = 0;
 
 // variable for max score
-cardApp.maxScore = 2;
+cardApp.maxScore = 5;
 
 // variable for API url
 cardApp.url = 'https://deckofcardsapi.com/api/deck/new/draw/?count=2';
@@ -89,32 +89,32 @@ cardApp.init = function(){
                     cardApp.playerScore += 1;
                     $('.playerScore').html(`<p>Player Score: ${cardApp.playerScore}</p>`);
                     checkForWin();
-                }, 2000)
+                }, 1500)
             } else if (result.cards[0].weight < result.cards[1].weight) {
                 setTimeout(function() {
                     cardApp.computerScore += 1;
                     $('.computerScore').html(`<p>Computer Score: ${cardApp.computerScore}</p>`);
                     checkForWin();
-                }, 2500)
+                }, 2000)
             }
 
             // user clicks "draw" -> displays player's card -> reveal computer's card
-            let playerCardImage = $('<img>').attr('src', result.cards[0].image);
-            let computerCardImage = $('<img>').attr('src', result.cards[1].image);
+            let playerCardImage = $('<img>').attr('src', result.cards[0].image).attr('alt', `Playing card: ${result.cards[0].value} of ${result.cards[0].suit}`);
+            let computerCardImage = $('<img>').attr('src', result.cards[1].image).attr('alt', `Playing card: ${result.cards[1].value} of ${result.cards[1].suit}`);
             
             $('.playerFlip').removeClass('cardInner');
             $('.playerCard .cardBack').empty().html(`<img src="./assets/pirateCard.jpg">`);
             setTimeout(function(){
                 $('.playerCard .cardBack').html(playerCardImage);
                 $('.playerFlip').addClass('cardInner');
-            }, 800)
+            }, 500)
             
             $('.computerFlip').removeClass('cardInner');
             $('.computerCard .cardBack').empty().html(`<img src="./assets/pirateCard.jpg">`);
             setTimeout(function(){
                 $('.computerCard .cardBack').html(computerCardImage);
                 $('.computerFlip').addClass('cardInner');
-            }, 1600)
+            }, 1000)
         })
     })
     

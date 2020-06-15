@@ -1,4 +1,12 @@
 @media (max-width: 950px) {
+    .wrapper {
+        width: 95%;
+    }
+
+    .playerArea {
+        margin: 2%;
+    }
+    
     .homeBody {
         background-image: url(.././assets/homeMobileBackground.jpg);
     }
@@ -10,6 +18,10 @@
         p {
             width: 70%;
         }
+    }
+
+    .card {
+        padding: 5px;
     }
     
     .desktopBtn {
@@ -35,10 +47,6 @@
 }
 
 @media (max-width: 590px) {
-    .wrapper {
-        width: 95%;
-    }
-
     .homeContent {
         h1 {
             font-size: 60px;
@@ -61,10 +69,10 @@
     }
 
     .playerArea {
-        width: 70%;
+        width: 50%;
             p {
                 height: auto;
-                font-size: 30px;
+                font-size: 20px;
             }
     }
 
@@ -72,18 +80,23 @@
         min-width: auto;
     }
 
+    .playerCard,
+    .computerCard {
+        min-height: 40vh;
+    }
+
     .cardFront,
     .cardBack {
         max-width: 300px;
-    }
-
-    .gameButtons {
-        width: 100%;
+        height: 50%;
     }
 
     .desktopBtn {
         display: block;
         margin: 0 auto;
+            button {
+                font-size: 20px;  
+            }
     }
 
     .mobileBtn {

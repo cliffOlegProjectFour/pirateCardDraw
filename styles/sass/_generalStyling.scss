@@ -15,8 +15,8 @@ img {
 
 button {
     border: none;
-    background-color: purple;
-    color: white;
+    background-color: #800080;
+    color: #ffffff;
     padding: 10px;
     width: 200px;
     border-radius: 10px;
@@ -29,7 +29,7 @@ button {
         &:active {
             width: 200px;
             height: auto;
-            background-color: rgb(101, 1, 101);
+            background-color: #650165;
         }
 }
 
@@ -50,28 +50,9 @@ p {
     height: 100vh;
 }
 
+// home page styling
 .homeBody {
     background-image: url('.././assets/homeBackground.jpg');
-}
-
-.gameBody {
-    background-image: url('.././assets/gameBackground.jpg');
-    background-repeat: repeat;
-}
-
-.winBody {
-    background-color: #65CFDC;
-}
-
-.loseBody {
-    background-color: #25011D;
-}
-
-.winBody img,
-.loseBody img{
-    width: 30%;
-    min-width: 200px;
-    margin: 20px auto 10px auto;
 }
 
 .homeContent,
@@ -90,6 +71,12 @@ p {
         }
 }
 
+// game area styling
+.gameBody {
+    background-image: url('.././assets/gameBackground.jpg');
+    background-repeat: repeat;
+}
+
 .gameArea {
     display: flex;
     justify-content: space-between;
@@ -105,13 +92,29 @@ p {
 }
 
 .card {
-    min-width: 200px;
     padding: 10px;
         img {
             border-radius: 20px;
         }
 }
 
+// end pages styling
+.winBody {
+    background-color: #65cfdc;
+}
+
+.loseBody {
+    background-color: #25011d;
+}
+
+.winBody img,
+.loseBody img{
+    width: 30%;
+    min-width: 200px;
+    margin: 20px auto 10px auto;
+}
+
+// buttons styling
 .home {
     display: block;
     text-align: center;
